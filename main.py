@@ -15,9 +15,9 @@ def main():
 
     # Placeholder for algorithms (to be implemented by teammates)
     if algorithm == "UR":
-        print("UR algorithm not implemented yet.")
+        ur(board, player)
     elif algorithm == "PMCGS":
-        print("PMCGS algorithm not implemented yet.")
+        pmcgs(board, player, param, mode)
     elif algorithm == "UCT":
         uct(board, player, param, mode)
     else:
