@@ -98,6 +98,6 @@ def load_board_from_file(filename):
     player = lines[1]
     board_lines = lines[2:8]
 
-    board = [list(row) for row in board_lines]
+    board = [list(row.replace('0', 'O')) for row in board_lines]
 
     return algorithm, player, board
