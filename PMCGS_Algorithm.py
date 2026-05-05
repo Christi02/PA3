@@ -1,18 +1,13 @@
 import random
-from BoardFunctions import (
-    get_valid_moves, make_move, undo_move, get_game_result, print_board
-)
+from BoardFunctions import (get_valid_moves, make_move, undo_move, get_game_result, print_board)
 
 class MCTSNode:
     def __init__(self):
         self.wi = 0
         self.ni = 0
-        self.children = {} # Maps column -> MCTSNode
+        self.children = {}
 
 def run_pmcgs(board, player, mode, param):
-    """
-    Algorithm 2: Pure Monte Carlo Game Search (PMCGS)
-    """
     root = MCTSNode()
     num_simulations = param
     verbose = (mode == "Verbose")
