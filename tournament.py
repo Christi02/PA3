@@ -2,7 +2,7 @@
 # Runs 100 games per matchup between 5 algorithm configurations
 from BoardFunctions import create_board, make_move, get_game_result, get_valid_moves
 from uct import uct, other_player
-from algorithms ur, pmcgs
+from algorithms import ur, pmcgs
 
 # ================================================
 # PLUG IN YAHIR'S CODE HERE
