@@ -1,5 +1,6 @@
 import sys
 from BoardFunctions import load_board_from_file
+from uct import uct
 
 def main():
     if len(sys.argv) != 4:
@@ -18,7 +19,7 @@ def main():
     elif algorithm == "PMCGS":
         print("PMCGS algorithm not implemented yet.")
     elif algorithm == "UCT":
-        print("UCT algorithm not implemented yet.")
+        uct(board, player, param, mode)
     else:
         print("Unknown algorithm.")
 
