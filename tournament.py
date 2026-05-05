@@ -2,6 +2,7 @@
 # Runs 100 games per matchup between 5 algorithm configurations
 from BoardFunctions import create_board, make_move, get_game_result, get_valid_moves
 from uct import uct, other_player
+from algorithms ur, pmcgs
 
 # ================================================
 # PLUG IN YAHIR'S CODE HERE
@@ -16,13 +17,13 @@ def get_move(board, player, algorithm, param, mode="None"):
         # YAHIR'S UR FUNCTION GOES HERE
         # return ur(board, player)
         # ================================================
-        pass
+        return ur(board, player)
     elif algorithm == "PMCGS":
         # ================================================
         # YAHIR'S PMCGS FUNCTION GOES HERE
         # return pmcgs(board, player, param, mode)
         # ================================================
-        pass
+        return pmcgs(board, player, param, mode)
     elif algorithm == "UCT":
         return uct(board, player, param, mode)
 
