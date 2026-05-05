@@ -7,7 +7,7 @@ class MCTSNode:
         self.ni = 0
         self.children = {}
 
-def run_pmcgs(board, player, mode, param):
+def pmcgs(board, player, mode, param):
     root = MCTSNode()
     num_simulations = param
     verbose = (mode == "Verbose")
