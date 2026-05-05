@@ -1,7 +1,6 @@
 import sys
 from BoardFunctions import load_board_from_file
-from UR_Algorithm import ur
-from PMCGS_Algorithm import pmcgs
+from algorithms import (ur, pmcgs)
 
 def main():
     if len(sys.argv) != 4:
