@@ -1,5 +1,4 @@
 import random
-from BoardFunctions import get_valid_moves
 from BoardFunctions import (get_valid_moves, make_move, undo_move, get_game_result, print_board)
 
 class MCTSNode:
@@ -8,7 +7,7 @@ class MCTSNode:
         self.ni = 0
         self.children = {}
         
-def ur(board, player, mode, param):
+def ur(board, player):
     """
     Algorithm 1: Uniform Random (UR)
     """
@@ -22,9 +21,11 @@ def ur(board, player, mode, param):
     print(f"FINAL Move selected: {selected_col + 1}")
     return selected_col + 1
 
-def pmcgs(board, player, mode, param):
+def pmcgs(board, player, num_simulations, mode):
+    """
+    Algorithm 2: Pure Monte Carlo Game Search (PMCGS)
+    """
     root = MCTSNode()
-    num_simulations = param
     verbose = (mode == "Verbose")
     
     for _ in range(num_simulations):
