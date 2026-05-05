@@ -18,7 +18,9 @@ def main():
     if algorithm == "UR":
         run_ur(board, player, mode, param)
     elif algorithm == "PMCGS":
-        run_pmcgs(board, player, mode, param)    elif algorithm == "UCT":
+        run_pmcgs(board, player, mode, param)    
+    elif algorithm == "UCT":
+        print('')
     else:
         print("Unknown algorithm.")
 
