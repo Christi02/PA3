@@ -119,11 +119,6 @@ def run_simulation(root, board, current_player, mode):
             print(f"wi: {int(visited_node.wi)}")
             print(f"ni: {visited_node.ni}")
 
-    # undo tree moves to restore board to original state
-    for _ in range(len(path) - 1):
-        # find which column leads to each node and undo it
-        pass  # handled by tracking moves below
-
 
 def uct(board, player, num_simulations, mode):
     root = TreeNode()
