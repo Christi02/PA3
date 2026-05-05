@@ -1,12 +1,21 @@
 import random
 from BoardFunctions import (get_valid_moves, make_move, undo_move, get_game_result, print_board)
 
+# =========================
+# MCTS Node Class
+# =========================
+
 class MCTSNode:
     def __init__(self):
         self.wi = 0
         self.ni = 0
-        self.children = {}
-        
+        self.children = {}  # Maps column -> MCTSNode
+
+
+# =========================
+# Algorithm 1: Uniform Random (UR)
+# =========================
+
 def ur(board, player):
     """
     Algorithm 1: Uniform Random (UR)
@@ -20,6 +29,11 @@ def ur(board, player):
     
     print(f"FINAL Move selected: {selected_col + 1}")
     return selected_col + 1
+
+
+# =========================
+# Algorithm 2: Pure Monte Carlo Game Search (PMCGS)
+# =========================
 
 def pmcgs(board, player, num_simulations, mode):
     """
