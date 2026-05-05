@@ -1,7 +1,7 @@
 import sys
 from BoardFunctions import load_board_from_file
-from UR_Algorithm import run_ur
-from PMCGS_Algorithm import run_pmcgs
+from UR_Algorithm import ur
+from PMCGS_Algorithm import pmcgs
 
 def main():
     if len(sys.argv) != 4:
@@ -16,9 +16,9 @@ def main():
 
     # Placeholder for algorithms (to be implemented by teammates)
     if algorithm == "UR":
-        run_ur(board, player, mode, param)
+        ur(board, player, mode, param)
     elif algorithm == "PMCGS":
-        run_pmcgs(board, player, mode, param)    
+        pmcgs(board, player, mode, param)    
     elif algorithm == "UCT":
         print('')
     else:
