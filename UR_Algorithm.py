@@ -1,7 +1,7 @@
 import random
 from BoardFunctions import get_valid_moves
 
-def run_ur(board, player, mode, param):
+def ur(board, player, mode, param):
     """
     Algorithm 1: Uniform Random (UR)
     """
