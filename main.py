@@ -17,7 +17,7 @@ def main():
     if algorithm == "UR":
         ur(board, player)
     elif algorithm == "PMCGS":
-        pmcgs(board, player, mode, param)    
+        pmcgs(board, player, param, mode)    
     elif algorithm == "UCT":
         print('')
     else:
